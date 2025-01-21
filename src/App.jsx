@@ -1,12 +1,12 @@
-import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./styles/App.css";
+import DashboardLayout from "./layouts/DashboardLayout";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<DashboardLayout />} />
       </Routes>
     </>
   );
