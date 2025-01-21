@@ -10,22 +10,22 @@ const Main = () => {
   return (
     <div className="">
       <div className="flex flex-col tablet:flex-row gap-4">
-        <div className="flex-1 bg-[#333537] text-white rounded-lg">
+        <div className="bg-[#333537] text-white rounded-lg w-7/12">
           <div className="text-xl font-bold mb-4 ml-2">Statistics Report</div>
-          <div className="mb-4 px-14 flex flex-row flex-wrap gap-4">
-            <div span={8} className="w-1/3 min-w-[150px]">
+          <div className="mb-4 px-14 flex flex-row gap-4 flex-wrap desktop:flex-nowrap">
+            <div span={8} className="w-1/3 min-w-[140px] ">
               <div className="bg-[#202020] text-white text-start px-2 rounded-lg">
                 <div className="font-semibold text-xs">Phishing</div>
                 <div className="text-xl font-bold leading-6">195</div>
               </div>
             </div>
-            <div span={8} className="w-1/3 min-w-[150px]">
+            <div span={8} className="w-1/3 min-w-[140px] ">
               <div className="bg-[#444] text-white text-start px-2 rounded-lg">
                 <div className="font-semibold text-xs">Typosquat</div>
                 <div className="text-xl font-bold leading-6">26</div>
               </div>
             </div>
-            <div span={8} className="w-1/3 min-w-[150px]">
+            <div span={8} className="w-1/3 min-w-[140px] ">
               <div className="bg-[#a1a1a1] text-white text-start px-2 rounded-lg">
                 <div className="font-semibold text-xs">Combined Threats</div>
                 <div className="text-xl font-bold leading-6">221</div>
@@ -41,8 +41,7 @@ const Main = () => {
           </div>
         </div>
 
-        {/* Tracked Phishes */}
-        <div className="flex-1 bg-[#333537] text-white rounded-lg py-2">
+        <div className=" bg-[#333537] text-white rounded-lg py-2 w-5/12">
           <div className="text-lg font-medium mb-4 ml-2">Tracked Phishes</div>
           <div className="space-y-4 overflow-y-auto max-h-[224px]">
             {data.map((item) => (
