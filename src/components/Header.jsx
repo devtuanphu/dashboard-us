@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, Dropdown, Input, Button, Avatar, Drawer } from "antd";
 import { SettingOutlined, BellOutlined, MenuOutlined } from "@ant-design/icons";
 import PropTypes from "prop-types";
@@ -12,6 +12,20 @@ const Header = ({ onSelect }) => {
   const [activeKey, setActiveKey] = useState("dashboard");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const handleSelect = (component) => {
     setIsDrawerVisible(false);
     onSelect(component);
@@ -54,11 +68,18 @@ const Header = ({ onSelect }) => {
   return (
     <div className="flex justify-between items-center px-2 py-4 mb-4 bg-[#3b424f59] text-white rounded-2xl laptop:mx-10 border-[#434343] border-[1px]">
       <div className="flex items-center gap-4">
-        <Button
-          icon={<MenuOutlined className="font-bold" />}
-          className="text-white bg-transparent border-none hover:text-gray-400"
-          onClick={() => setIsDrawerVisible(true)}
-        />
+        {isMobileView ? (
+          <Button
+            icon={<MenuOutlined className="font-bold" />}
+            className="text-white bg-transparent border-none hover:text-gray-400"
+            onClick={() => setIsDrawerVisible(true)}
+          />
+        ) : (
+          <Button
+            icon={<MenuOutlined className="font-bold" />}
+            className="text-white bg-transparent border-none hover:text-gray-400"
+          />
+        )}
 
         <Drawer
           placement="left"
