@@ -17,7 +17,7 @@ const OverallCyberThreats = () => {
       </div>
 
       <div className="flex flex-col tablet:flex-row gap-4">
-        <div className="w-8/12 rounded-lg overflow-hidden">
+        <div className="w-full laptop:w-8/12 rounded-lg overflow-hidden">
           <img
             src={imageMap}
             alt="World Map"
@@ -25,7 +25,7 @@ const OverallCyberThreats = () => {
           />
         </div>
 
-        <div className="w-4/12 space-y-4 max-h-[220px] overflow-y-auto px-2 mt-2">
+        <div className="w-full laptop:w-4/12 space-y-4 max-h-[220px] overflow-y-auto px-2 mt-2">
           {data.map((item, index) => (
             <div key={index} className="flex items-center justify-between">
               <div className="flex items-center gap-2">

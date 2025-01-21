@@ -8,7 +8,7 @@ export default function DashboardLayout() {
 
   return (
     <div className="bg-[#121213]">
-      <div className="flex gap-6 h-screen px-6 py-4  overflow-hidden max-w-[1440px] mx-auto">
+      <div className="flex gap-6 h-screen px-6 py-4  overflow-hidden">
         <div className="hidden laptop:block">
           <Sidebar onSelect={setSelectedContent} />
         </div>
