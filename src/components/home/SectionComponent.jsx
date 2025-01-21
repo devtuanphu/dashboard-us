@@ -31,7 +31,7 @@ const SectionComponent = () => {
   );
 
   return (
-    <div className="overflow-x-auto w-[calc(100vw-46px)] tablet:w-[calc(100vw-56px)] laptop:w-[calc(100vw-381px)] desktop:w-full">
+    <div className="overflow-x-auto w-[calc(100vw-46px)] tablet:w-[calc(100vw-56px)] laptop:w-[calc(100vw-381px)] desktop:w-full ">
       <div className="bg-[#333537] text-white rounded-lg p-6 mt-[24px] min-w-[1040px]">
         <div className="grid grid-cols-5 gap-4 mb-4">
           <div className="text-center text-sm font-semibold">
@@ -91,19 +91,20 @@ const SectionComponent = () => {
             />
           </div>
         </div>
-
-        {filteredData.map((item) => (
-          <div
-            className="grid grid-cols-5 gap-4 border-white border-b"
-            key={item.id}
-          >
-            <p className="p-1 mb-0 font-medium">{item.url}</p>
-            <p className="p-1 mb-0 font-medium">{item.recordType}</p>
-            <p className="p-1 mb-0 font-medium">{item.currentDns}</p>
-            <p className="p-1 mb-0 font-medium">{item.previousDns}</p>
-            <p className="p-1 mb-0 font-medium">{item.updated}</p>
-          </div>
-        ))}
+        <div className="max-h-[400px] overflow-y-auto">
+          {filteredData.map((item) => (
+            <div
+              className="grid grid-cols-5 gap-4 border-white border-b"
+              key={item.id}
+            >
+              <p className="p-1 mb-0 font-medium">{item.url}</p>
+              <p className="p-1 mb-0 font-medium">{item.recordType}</p>
+              <p className="p-1 mb-0 font-medium">{item.currentDns}</p>
+              <p className="p-1 mb-0 font-medium">{item.previousDns}</p>
+              <p className="p-1 mb-0 font-medium">{item.updated}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
