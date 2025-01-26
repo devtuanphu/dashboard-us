@@ -2,10 +2,11 @@ import { useState } from "react";
 import { Avatar, Menu } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import PropTypes from "prop-types";
-import imageLogo from "../../assets/images/logo.png";
-import iconRight from "../../assets/images/iconRight.svg";
-import iconUp from "../../assets/images/iconUp.svg";
-import lock from "../../assets/images/lock.svg";
+import imageLogo from "../assets/images/logo.png";
+import iconRight from "../assets/images/iconRight.svg";
+import iconUp from "../assets/images/iconUp.svg";
+import lock from "../assets/images/lock.svg";
+import BasicScanner from "../page/BasicScanner";
 
 const { SubMenu } = Menu;
 
@@ -17,7 +18,7 @@ const sidebarData = [
       {
         id: 79,
         name: "Basic Scanner",
-        component: <div>Basic Scanner Content</div>,
+        component: <BasicScanner />,
       },
       {
         id: 71,
@@ -95,7 +96,7 @@ export default function Sidebar({ onSelect }) {
   };
 
   return (
-    <div className="w-64 h-full bg-[#333] text-white rounded-3xl">
+    <div className="w-64 h-max min-h-full bg-[#333] text-white rounded-3xl">
       <div className="flex items-center justify-between px-4 w-full border-b border-[#fff]">
         <Avatar size={54} src={imageLogo} />
         <div className="relative min-w-[100px]">
@@ -112,7 +113,7 @@ export default function Sidebar({ onSelect }) {
           [Free/Premium] Plan
         </div>
       </div>
-      <div className="h-full max-h-[400px] overflow-y-auto">
+      <div className="h-full">
         <Menu
           mode="inline"
           selectedKeys={[activeItem]}

@@ -3,10 +3,10 @@ import { Menu, Dropdown, Input, Button, Avatar, Drawer } from "antd";
 import { SettingOutlined, BellOutlined, MenuOutlined } from "@ant-design/icons";
 import PropTypes from "prop-types";
 
-import Home from "../page/dashboard/Home";
+import Home from "../page/Home";
 import iconRight from "../assets/images/iconRight.svg";
 import iconUp from "../assets/images/iconUp.svg";
-import Sidebar from "./sidebar/Sidebar";
+import Sidebar from "./Sidebar";
 
 const Header = ({ onSelect }) => {
   const [activeKey, setActiveKey] = useState("dashboard");

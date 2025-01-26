@@ -31,18 +31,14 @@ const SectionComponent = () => {
   );
 
   return (
-    <div className="overflow-x-auto w-[calc(100vw-46px)] tablet:w-[calc(100vw-56px)] laptop:w-[calc(100vw-381px)] desktop:w-full ">
+    <div className="overflow-x-auto w-[calc(100vw-46px)] tablet:w-[calc(100vw-56px)] laptop:w-[calc(100vw-334px)] desktop:w-full ">
       <div className="bg-[#333537] text-white rounded-lg p-6 mt-[24px] min-w-[1040px]">
         <div className="grid grid-cols-5 gap-4 mb-4">
-          <div className="text-center text-sm font-semibold">
-            Typosquat link
-          </div>
-          <div className="text-center text-sm font-semibold">
-            Type of record
-          </div>
-          <div className="text-center text-sm font-semibold">Current dns</div>
-          <div className="text-center text-sm font-semibold">Previous dns</div>
-          <div className="text-center text-sm font-semibold">Updated</div>
+          <div className=" text-sm font-semibold">Typosquat link</div>
+          <div className=" text-sm font-semibold">Type of record</div>
+          <div className=" text-sm font-semibold">Current dns</div>
+          <div className=" text-sm font-semibold">Previous dns</div>
+          <div className=" text-sm font-semibold">Updated</div>
         </div>
         <div className="grid grid-cols-5 gap-4 pb-4 mb-2 border-white border-b">
           <div>
