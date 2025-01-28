@@ -66,7 +66,7 @@ const Header = ({ onSelect }) => {
   };
 
   return (
-    <div className="flex justify-between items-center px-2 py-4 mb-4 bg-[#3b424f59] text-white rounded-2xl laptop:mx-10 border-[#434343] border-[1px]">
+    <div className="flex justify-between items-center px-2 py-4 mb-4 bg-[#3b424f59] text-white rounded-2xl  border-[#434343] border-[1px]">
       <div className="flex items-center gap-4">
         {isMobileView ? (
           <Button
